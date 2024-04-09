@@ -1,28 +1,6 @@
-import "dotenv/config";
+// import "dotenv/config";
 import admin from "firebase-admin";
 import serviceAccount from "./iotpi-1b831-firebase-adminsdk-9p7mf-f4a433c9ac.json" assert { type: "json" };
-
-const {
-  apiKey,
-  authDomain,
-  projectId,
-  storageBucket,
-  messagingSenderId,
-  appId,
-  measurementId,
-  databaseURL,
-} = process.env;
-
-const firebaseConfig = {
-  apiKey,
-  authDomain,
-  projectId,
-  storageBucket,
-  messagingSenderId,
-  appId,
-  measurementId,
-  databaseURL,
-};
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
